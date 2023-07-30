@@ -1,11 +1,9 @@
-import Navbar from "./Navbar";
+import Navbar from './Navbar';
 
-const Countries = () =>{
-    return(
-        <div>
-        <Navbar />
-        </div>
-    )
-}
+const Countries = () => (
+  <div>
+    <Navbar />
+  </div>
+);
 
 export default Countries;
