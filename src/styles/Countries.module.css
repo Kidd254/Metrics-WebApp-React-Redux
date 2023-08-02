@@ -1,0 +1,60 @@
+.linkList {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  width: 30px;
+}
+
+.countryList {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 18em;
+}
+
+.countryMainContainer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.countryContainer {
+  border: 2px solid black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 18em;
+  background-color: #5788e5;
+  border-radius: 6px;
+}
+
+.countryName {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+  flex-wrap: wrap;
+}
+
+.countryFlag {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  flex-wrap: wrap;
+  color: gold;
+}
+
+.link {
+  background-color: #4369b0;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  text-overflow: ellipsis;
+  width: 8.96rem;
+  text-decoration: none;
+}
