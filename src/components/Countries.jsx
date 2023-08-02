@@ -3,7 +3,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { getDataFromApi } from '../redux/country/countrySlice';
 import Navbar from './Navbar';
-import CountriesCSS from '../styles/Countries.module.css';
+import styles from '../styles/Countries.module.css';
 
 const Countries = () => {
   const [continent, setContinent] = useState('all');
@@ -15,8 +15,8 @@ const Countries = () => {
     dispatch(getDataFromApi());
   }, [dispatch]);
   return (
-    <div className={CountriesCSS.countryMainContainer} data-testid="countryContainer">
-      <div className={CountriesCSS.countryContainer}>
+    <div className={styles.countryMainContainer} data-testid="countryContainer">
+      <div className={styles.countryContainer}>
         <Navbar />
         <h1>Countries</h1>
         <div>
@@ -35,17 +35,17 @@ const Countries = () => {
             <option value="Antarctica">Antarctica</option>
           </select>
         </div>
-        <div className={CountriesCSS.countryList}>
+        <div className={styles.countryList}>
           {countries.filter((country) => {
             if (continent === 'all') {
               return country;
             }
             return country.continent === continent;
           }).map((country) => (
-            <Link to={`/${country.name.common}`} key={country.name.common} className={CountriesCSS.link}>
-              <ul className={CountriesCSS.linkList}>
-                <li className={CountriesCSS.countryName}>{country.name.common}</li>
-                <li className={CountriesCSS.countryFlag}>{country.flag}</li>
+            <Link to={`/${country.name.common}`} key={country.name.common} className={styles.link}>
+              <ul className={styles.linkList}>
+                <li className={styles.countryName}>{country.name.common}</li>
+                <li className={styles.countryFlag}>{country.flag}</li>
               </ul>
             </Link>
           ))}
