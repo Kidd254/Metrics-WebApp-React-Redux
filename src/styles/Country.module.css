@@ -1,0 +1,60 @@
+.countryMainContainer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.countryContainer {
+  border: 2px solid black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 18em;
+  background-color: #5788e5;
+  border-radius: 6px;
+  height: 99.2vh;
+  gap: 9rem;
+}
+
+.ctryFlag {
+  width: 150px;
+}
+
+.countryDetails {
+  background-color: #4369b0;
+  width: 18em;
+  padding-top: 2rem;
+}
+
+.countryAndFlag {
+  display: flex;
+  align-items: center;
+  height: 100px;
+  width: 100%;
+  justify-content: center;
+}
+
+.countryAndFlagItem {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.countryFlagName {
+  color: gold;
+  font-size: 30px;
+}
+
+.countryInformation {
+  list-style: none;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-size: 15px;
+}
