@@ -138,7 +138,7 @@ I am always looking for ways to improve my project. If you have any suggestions 
 <!-- CONTRIBUTING -->
 ## 📧 Authors <a name="authors"></a>
 
-- ***[Tonny Tei](https://github.com/tonnytech)***
+- ***[Lawrence Muema Kioko](https://github.com/Kidd254)***
 
 ## 🤝 Contributing <a name="contributing"></a>
 
