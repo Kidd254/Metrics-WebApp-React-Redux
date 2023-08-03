@@ -5,7 +5,7 @@ import styles from '../styles/Country.module.css';
 
 const Country = () => {
   const { id } = useParams();
-  const { countries } = useSelector((state) => state.countries);
+  const { countries } = useSelector((state) => state.Countries);
 
   const country = countries.find((display) => display.name.common === id);
   return (
