@@ -1,19 +1,12 @@
-import { useState, useEffect } from 'react';
-import { useSelector, useDispatch } from 'react-redux';
+import { useState } from 'react';
+import { useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
-import { getDataFromApi } from '../redux/country/countrySlice';
 import Navbar from './Navbar';
 import styles from '../styles/Countries.module.css';
 
 const Countries = () => {
   const [continent, setContinent] = useState('all');
-  const { countries } = useSelector((state) => state.countries);
-  const dispatch = useDispatch();
-
-  useEffect(() => {
-    // Dispatch the getDataFromApi action to fetch the data when the component mounts
-    dispatch(getDataFromApi());
-  }, [dispatch]);
+  const { countries } = useSelector((state) => state.Countries);
   return (
     <div className={styles.countryMainContainer} data-testid="countryContainer">
       <div className={styles.countryContainer}>
