@@ -55,7 +55,7 @@ A web-based application to understand about the basics of React - Redux
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-- See it live by clicking [Live Demo Link]()
+- See it live by clicking [Live Demo Link](https://metrics-webapp-4iuc.onrender.com/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
