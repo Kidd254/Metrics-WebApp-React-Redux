@@ -3,10 +3,8 @@
   flex-direction: row;
   justify-content: space-between;
   gap: 13rem;
-  width: 20.5em;
   background-color: #4369b2;
-  margin-top: 4px;
-  padding: 10px 9px 5px;
+  padding: 5px 9px 5px 7px;
   color: #fff;
 }
 

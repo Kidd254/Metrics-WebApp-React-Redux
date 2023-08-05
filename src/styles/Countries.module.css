@@ -1,4 +1,17 @@
-/* Common styles for both desktop and mobile */
+.linkList {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  width: 30px;
+}
+
+.countryList {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 18em;
+}
+
 .countryMainContainer {
   width: 100%;
   display: flex;
@@ -7,107 +20,41 @@
 }
 
 .countryContainer {
+  border: 2px solid black;
   display: flex;
-  padding-left: 0;
-  margin-left: 0;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  width: 23em;
-  border-radius: 6px;
+  width: 18em;
   background-color: #5788e5;
-}
-
-.countryList {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  justify-content: flex-start;
-  width: 22.8em;
-}
-
-.rowContainer {
-  display: flex;
-  width: 100%;
-}
-
-.selectHeader {
-  width: 21em;
-  height: 10px;
-  margin-top: 20px;
-  margin-bottom: 2px;
-  background-color: #0b2e50;
-}
-
-.link {
-  text-overflow: ellipsis;
-  text-decoration: none;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  white-space: pre-wrap;
-  flex-basis: 0;
-  flex-grow: 1;
+  border-radius: 6px;
 }
 
 .countryName {
-  color: #fff;
-  padding: 0.5rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   text-align: center;
+  color: #fff;
+  flex-wrap: wrap;
 }
 
 .countryFlag {
-  color: gold;
-  font-size: 18px;
-  flex-grow: 1; /* Let the flag container occupy the remaining space */
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
+  text-align: center;
+  flex-wrap: wrap;
+  color: gold;
 }
 
-.linkList {
-  /* Set a fixed height for the country name container */
-  height: 4rem;
+.link {
+  background-color: #4369b0;
   display: flex;
-  flex-direction: column; /* Make the elements appear in a column */
-}
-
-/* Set the background color for even rows */
-.rowContainer:nth-child(even) .link:nth-child(even) {
-  background-color: #5788e5;
-}
-
-/* Set the background color for odd rows */
-.rowContainer:nth-child(odd) .link:nth-child(odd) {
-  background-color: #5788e5;
-}
-
-.rowContainer:nth-child(even) .link:nth-child(odd) {
-  background-color: #4369b2;
-}
-
-.rowContainer:nth-child(odd) .link:nth-child(even) {
-  background-color: #4369b2;
-}
-
-/* Media query for mobile devices with a screen width up to 768px */
-@media (max-width: 768px) {
-  .countryContainer {
-    width: 100%; /* Reduce the width for mobile devices */
-  }
-
-  .link {
-    width: 100%; /* Adjust the width for mobile devices */
-    height: 150px; /* Adjust the height for mobile devices */
-    font-size: 20px;
-    justify-content: center;
-    align-items: center;
-    margin-left: 4px;
-    font-weight: 900; /* Add some bottom margin to separate rows on mobile */
-  }
-
-  .linkList {
-    width: 100%;
-    height: 150px;
-  }
+  flex-direction: column;
+  flex-wrap: wrap;
+  text-overflow: ellipsis;
+  width: 8.96rem;
+  text-decoration: none;
 }
