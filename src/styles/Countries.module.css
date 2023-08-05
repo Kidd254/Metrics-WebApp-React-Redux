@@ -22,7 +22,7 @@
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  justify-content:flex-start;
+  justify-content: flex-start;
   align-items: center;
   width: 22.8em;
 }
@@ -80,16 +80,13 @@
     height: 150px; /* Adjust the height for mobile devices */
     font-size: 20px;
     margin-bottom: 0;
-    white-space: wrap;
     justify-content: center;
     align-items: center;
     margin-left: 4px;
     font-weight: 900; /* Add some bottom margin to separate rows on mobile */
   }
-  
+
   .linkList {
     width: 100%;
-
   }
 }
-

@@ -16,7 +16,7 @@
   border-radius: 6px;
   height: 99.2vh;
   gap: 4rem;
-  padding: 0rem;
+  padding: 0;
 }
 
 .countryAndFlagItem {
@@ -94,4 +94,3 @@
 .countryInformationList:nth-child(odd) {
   background-color: #4369b2;
 }
-
