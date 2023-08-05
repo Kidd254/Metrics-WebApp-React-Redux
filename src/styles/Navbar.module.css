@@ -32,6 +32,6 @@
   .navLinkIcons {
     flex-direction: row; /* Change to row to make list items appear in a row */
     gap: 3rem;
-    justify-content: center; 
+    justify-content: center;
   }
 }
