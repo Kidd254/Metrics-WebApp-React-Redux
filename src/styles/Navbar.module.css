@@ -1,8 +1,9 @@
+/* Common styles for both desktop and mobile */
 .navContainer {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  gap: 13rem;
+  gap: 10rem;
   width: 20.5em;
   background-color: #4369b2;
   margin-top: 4px;
@@ -18,3 +19,20 @@
   display: flex;
   gap: 1rem;
 }
+
+/* Media query for mobile devices with a screen width up to 768px */
+@media (max-width: 768px) {
+  .navContainer {
+    flex-direction: row;
+    justify-content: space-around;
+    gap: 5rem;
+    width: 100%;
+  }
+
+  .navLinkIcons {
+    flex-direction: row; /* Change to row to make list items appear in a row */
+    gap: 3rem;
+    justify-content: center; 
+  }
+}
+

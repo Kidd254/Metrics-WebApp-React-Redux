@@ -92,8 +92,10 @@
 
 /* Media query for mobile devices with a screen width up to 768px */
 @media (max-width: 768px) {
+
   .countryContainer {
-    width: 100%; /* Reduce the width for mobile devices */
+    width: 100%; 
+    padding-right: 35px;/* Reduce the width for mobile devices */
   }
 
   .link {
