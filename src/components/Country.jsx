@@ -49,7 +49,7 @@ const Country = () => {
             <li className={styles.countryInformationList}>
               {' '}
               Start of Week:
-              {country.startOfWeek}
+              {country.week}
             </li>
           </ul>
         </div>
