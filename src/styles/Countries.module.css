@@ -8,11 +8,12 @@
 
 .countryContainer {
   display: flex;
+  padding-left: 0;
+  margin-left: 0;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  width: 18em;
+  width: 22em;
   border-radius: 6px;
   background-color: #5788e5;
 }
@@ -21,6 +22,8 @@
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
+  justify-content:flex-start;
+  align-items: center;
   width: 22.8em;
 }
 
@@ -29,28 +32,31 @@
 }
 
 .selectHeader {
-  width: 22.9em;
+  width: 21em;
   height: 10px;
+  margin-top: 20px;
+  margin-bottom: 2px;
   background-color: #0b2e50;
 }
 
 .link {
   text-overflow: ellipsis;
   text-decoration: none;
-  width: 9em; /* Set a fixed width */
-  height: 8em; /* Set a fixed height */
+  width: 100%; /* Set a fixed width */
+  height: 150px; /* Set a fixed height */
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
 }
 
 .evenCountry {
   background-color: #5788e5;
+  width: 50%;
 }
 
 .oddCountry {
   background-color: #4369b2;
+  width: 50%;
 }
 
 .countryName {
@@ -71,11 +77,19 @@
 
   .link {
     width: 100%; /* Reduce the width for mobile devices */
-    height: 7em; /* Adjust the height for mobile devices */
-    font-size: 20px; /* Adjust the font size for better readability on mobile */
-    padding: 0px; /* Adjust the padding for better spacing */
-    margin-bottom: 5px;
+    height: 150px; /* Adjust the height for mobile devices */
+    font-size: 20px;
+    margin-bottom: 0;
+    white-space: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-left: 4px;
     font-weight: 900; /* Add some bottom margin to separate rows on mobile */
+  }
+  
+  .linkList {
+    width: 100%;
+
   }
 }
 
