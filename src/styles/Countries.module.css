@@ -28,7 +28,7 @@
 
 .rowContainer {
   display: flex;
-  width: 100%; 
+  width: 100%;
 }
 
 .selectHeader {
@@ -46,14 +46,14 @@
   flex-direction: column;
   align-items: center;
   white-space: pre-wrap;
-  flex-basis: 0; 
-  flex-grow: 1; 
+  flex-basis: 0;
+  flex-grow: 1;
 }
 
 .countryName {
   color: #fff;
   padding: 0.5rem 1rem;
-  text-align: center; 
+  text-align: center;
 }
 
 .countryFlag {
