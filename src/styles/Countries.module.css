@@ -1,17 +1,4 @@
-.linkList {
-  list-style: none;
-  display: flex;
-  flex-direction: column;
-  width: 30px;
-}
-
-.countryList {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  width: 18em;
-}
-
+/* Common styles for both desktop and mobile */
 .countryMainContainer {
   width: 100%;
   display: flex;
@@ -20,41 +7,75 @@
 }
 
 .countryContainer {
-  border: 2px solid black;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
   width: 18em;
-  background-color: #5788e5;
   border-radius: 6px;
+  background-color: #5788e5;
 }
 
-.countryName {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  color: #fff;
-  flex-wrap: wrap;
-}
-
-.countryFlag {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  flex-wrap: wrap;
-  color: gold;
-}
-
-.link {
-  background-color: #4369b0;
+.countryList {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  text-overflow: ellipsis;
-  width: 8.96rem;
-  text-decoration: none;
+  width: 22.8em;
 }
+
+.rowContainer {
+  display: flex;
+}
+
+.selectHeader {
+  width: 22.9em;
+  height: 10px;
+  background-color: #0b2e50;
+}
+
+.link {
+  text-overflow: ellipsis;
+  text-decoration: none;
+  width: 9em; /* Set a fixed width */
+  height: 8em; /* Set a fixed height */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.evenCountry {
+  background-color: #5788e5;
+}
+
+.oddCountry {
+  background-color: #4369b2;
+}
+
+.countryName {
+  color: #fff;
+}
+
+.countryFlag {
+  color: gold;
+  padding: 1em;
+  font-size: 18px;
+}
+
+/* Media query for mobile devices with a screen width up to 768px */
+@media (max-width: 768px) {
+  .countryContainer {
+    width: 100%; /* Reduce the width for mobile devices */
+  }
+
+  .link {
+    width: 100%; /* Reduce the width for mobile devices */
+    height: 7em; /* Adjust the height for mobile devices */
+    font-size: 20px; /* Adjust the font size for better readability on mobile */
+    padding: 0px; /* Adjust the padding for better spacing */
+    margin-bottom: 5px;
+    font-weight: 900; /* Add some bottom margin to separate rows on mobile */
+  }
+}
+
