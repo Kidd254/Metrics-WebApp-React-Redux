@@ -3,8 +3,9 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  gap: 10rem;
-  width: 20.5em;
+  gap: 18rem;
+  width: 19.5em;
+  margin-bottom: 5px;
   background-color: #4369b2;
   padding: 10px 9px 5px;
   color: #fff;
