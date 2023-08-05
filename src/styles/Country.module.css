@@ -1,8 +1,9 @@
+/* Country.module.css */
+
 .countryMainContainer {
   width: 100%;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: flex-start;
   height: 100vh;
 }
 
@@ -10,31 +11,11 @@
   border: 2px solid black;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  flex-wrap: wrap;
-  width: 18em;
+  width: 22.9em;
   background-color: #5788e5;
   border-radius: 6px;
   height: 99.2vh;
-  gap: 9rem;
-}
-
-.ctryFlag {
-  width: 150px;
-}
-
-.countryDetails {
-  background-color: #4369b0;
-  width: 18em;
-  padding-top: 2rem;
-}
-
-.countryAndFlag {
-  display: flex;
-  align-items: center;
-  height: 100px;
-  width: 100%;
-  justify-content: center;
+  gap: 4rem;
 }
 
 .countryAndFlagItem {
@@ -42,6 +23,10 @@
   justify-content: center;
   align-items: center;
   gap: 10px;
+}
+
+.ctryFlag {
+  width: 150px;
 }
 
 .countryFlagName {
@@ -53,8 +38,58 @@
   list-style: none;
   color: #fff;
   display: flex;
-  justify-content: center;
-  align-items: center;
   flex-direction: column;
   font-size: 15px;
+}
+
+.countryInformationList {
+  display: flex;
+  align-items: center;
+  height: 5em;
+  flex-direction: row;
+  margin-left: 0;
+  padding-left: 0;
+}
+
+.key {
+  font-weight: bold;
+  flex-grow: 1;
+}
+
+.value {
+  flex-grow: 3;
+  padding-left: 4em;
+}
+
+.countryDetails {
+  background-color: #4369b0;
+  width: 22.9em;
+  padding-top: 2rem;
+}
+
+.countryAndFlag {
+  display: flex;
+  align-items: center;
+  height: 100px;
+  width: 100%;
+  justify-content: center;
+}
+
+.link {
+  text-overflow: ellipsis;
+  text-decoration: none;
+  width: 12em;
+  height: 8em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Apply alternating colors to rows */
+.countryInformationList:nth-child(even) {
+  background-color: #5788e5;
+}
+
+.countryInformationList:nth-child(odd) {
+  background-color: #4369b2;
 }
