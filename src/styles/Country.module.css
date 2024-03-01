@@ -15,14 +15,13 @@
   background-color: #5788e5;
   border-radius: 6px;
   height: 99.2vh;
-  gap: 4rem;
 }
 
 .countryAndFlagItem {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 10px;
+  gap: 4em;
 }
 
 .ctryFlag {
@@ -38,6 +37,7 @@
   list-style: none;
   color: #fff;
   display: flex;
+  padding-left: 0;
   flex-direction: column;
   font-size: 15px;
 }
