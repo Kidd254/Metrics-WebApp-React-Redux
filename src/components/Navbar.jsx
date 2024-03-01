@@ -3,7 +3,10 @@ import { IoChevronBack } from 'react-icons/io5';
 import { AiFillSetting, AiFillAudio } from 'react-icons/ai';
 
 const Navbar = () => (
-  <div className="bg-gray-800 text-white p-4 flex items-center justify-between" data-testid="navContainer">
+  <div
+    className="bg-blue-500 text-white p-4 flex items-center justify-between"
+    data-testid="navContainer"
+  >
     <NavLink to="/" className="text-xl">
       <IoChevronBack />
     </NavLink>

@@ -35,13 +35,15 @@ const Countries = () => {
             <option value="Antarctica">Antarctica</option>
           </select>
         </div>
-        <div className="mb-4" />
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
+        <div className="mb-4 border rounded" />
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 border-rounded">
           {filteredCountries.map((country, index) => (
             <Link
               to={`/${country.name.common}`}
               key={`country-${index}`}
-              className="p-4 border bg-gray-200"
+              className={`p-4 border ${
+                index % 2 === 0 ? 'bg-blue-500' : 'bg-blue-300'
+              }`}
             >
               <div>
                 <span className="text-xl font-bold mb-2">
