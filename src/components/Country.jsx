@@ -1,45 +1,43 @@
 import { useParams } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import Navbar from './Navbar';
-import styles from '../styles/Country.module.css';
 
 const Country = () => {
   const { id } = useParams();
   const { countries } = useSelector((state) => state.Countries);
 
   const country = countries.find((display) => display.name.common === id);
+
   return (
-    <div className={styles.countryMainContainer} data-testid="details">
-      <div className={styles.countryContainer}>
+    <div className="bg-gray-100 p-4" data-testid="details">
+      <div className="container mx-auto">
         <Navbar />
         {country && (
           <div>
-            <div className={styles.countryAndFlagItem}>
-              <span>
-                <img src={country.flagImage} className={styles.ctryFlag} alt={country.flag} />
-              </span>
-              <span className={styles.countryFlagName}>{country.flag}</span>
+            <div className="flex items-center mb-4">
+              <img src={country.flagImage} className="w-12 h-8 mr-2" alt={country.flag} />
+              <span className="text-xl font-bold">{country.flag}</span>
             </div>
-            <ul className={styles.countryInformation}>
-              <li className={styles.countryInformationList}>
-                <span className={styles.key}>Capital City:</span>
-                <span className={styles.value}>{country.capital}</span>
+            <ul className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <li className="mb-2">
+                <span className="font-bold">Capital City:</span>
+                <span>{country.capital}</span>
               </li>
-              <li className={styles.countryInformationList}>
-                <span className={styles.key}>Population:</span>
-                <span className={styles.value}>{country.population}</span>
+              <li className="mb-2">
+                <span className="font-bold">Population:</span>
+                <span>{country.population}</span>
               </li>
-              <li className={styles.countryInformationList}>
-                <span className={styles.key}>Continent:</span>
-                <span className={styles.value}>{country.continent}</span>
+              <li className="mb-2">
+                <span className="font-bold">Continent:</span>
+                <span>{country.continent}</span>
               </li>
-              <li className={styles.countryInformationList}>
-                <span className={styles.key}>Region:</span>
-                <span className={styles.value}>{country.region}</span>
+              <li className="mb-2">
+                <span className="font-bold">Region:</span>
+                <span>{country.region}</span>
               </li>
-              <li className={styles.countryInformationList}>
-                <span className={styles.key}>Start of Week:</span>
-                <span className={styles.value}>{country.week}</span>
+              <li className="mb-2">
+                <span className="font-bold">Start of Week:</span>
+                <span>{country.week}</span>
               </li>
             </ul>
           </div>

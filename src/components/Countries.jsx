@@ -3,29 +3,26 @@ import { useState } from 'react';
 import { useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 import Navbar from './Navbar';
-import styles from '../styles/Countries.module.css';
 
 const Countries = () => {
   const [continent, setContinent] = useState('all');
   const { countries } = useSelector((state) => state.Countries);
 
   // Filter and group countries by continent
-  const filteredCountries = countries.filter((country) => continent === 'all' || country.continent === continent);
-  const countriesByRow = [];
-  const rowSize = 2;
-  for (let i = 0; i < filteredCountries.length; i += rowSize) {
-    countriesByRow.push(filteredCountries.slice(i, i + rowSize));
-  }
+  const filteredCountries = countries.filter(
+    (country) => continent === 'all' || country.continent === continent,
+  );
 
   return (
-    <div className={styles.countryMainContainer} data-testid="countryContainer">
-      <div className={styles.countryContainer}>
+    <div className="bg-gray-100 p-4" data-testid="countryContainer">
+      <div className="container mx-auto">
         <Navbar />
-        <h1>Countries</h1>
+        <h1 className="text-3xl font-bold mb-4">Countries</h1>
         <div>
           <select
             name="continents"
             id="continents"
+            className="p-2 border rounded"
             onChange={(e) => setContinent(e.target.value)}
           >
             <option value="all">All</option>
@@ -38,25 +35,23 @@ const Countries = () => {
             <option value="Antarctica">Antarctica</option>
           </select>
         </div>
-        <div className={styles.selectHeader} />
-        <div className={styles.countryList}>
-          {countriesByRow.map((row, rowIndex) => (
-            <div key={`row-${rowIndex}`} className={styles.rowContainer}>
-              {row.map((country, colIndex) => (
-                <Link
-                  to={`/${country.name.common}`}
-                  key={`row-${rowIndex}-col-${colIndex}`}
-                  className={`${styles.link} ${
-                    (rowIndex + colIndex) % 2 === 0 ? styles.evenCountry : styles.oddCountry
-                  }`}
-                >
-                  <div className={styles.linkList}>
-                    <span className={styles.countryName}>{country.name.common}</span>
-                    <span className={styles.countryFlag}>{country.flag}</span>
-                  </div>
-                </Link>
-              ))}
-            </div>
+        <div className="mb-4 border rounded" />
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 border-rounded">
+          {filteredCountries.map((country, index) => (
+            <Link
+              to={`/${country.name.common}`}
+              key={`country-${index}`}
+              className={`p-4 border ${
+                index % 2 === 0 ? 'bg-blue-500' : 'bg-blue-300'
+              }`}
+            >
+              <div>
+                <span className="text-xl font-bold mb-2">
+                  {country.name.common}
+                </span>
+                <span className="block">{country.flag}</span>
+              </div>
+            </Link>
           ))}
         </div>
       </div>
